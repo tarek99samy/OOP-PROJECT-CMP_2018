@@ -18,7 +18,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -129,7 +129,9 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actions\PasteFigAction.cpp" />
     <ClCompile Include="Actions\select.cpp" />
+    <ClCompile Include="Actions\CopyFigAction.cpp" />
     <ClCompile Include="AddEllipseAction.cpp" />
     <ClCompile Include="AddLineAction.cpp" />
     <ClCompile Include="AddRhombusAction.cpp" />
@@ -183,6 +185,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actions\CopyFigAction.h" />
+    <ClInclude Include="Actions\PasteFigAction.h" />
     <ClInclude Include="Actions\select.h" />
     <ClInclude Include="AddEllipseAction.h" />
     <ClInclude Include="AddLineAction.h" />

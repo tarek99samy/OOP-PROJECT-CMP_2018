@@ -17,7 +17,8 @@ protected:
 
 public:
 	CFigure(GfxInfo FigureGfxInfo);
-
+	GfxInfo getGfxInfo() const ;
+	virtual Point* getPoints() = 0;
 	void SetSelected(bool s);	//select/unselect the figure
 	virtual bool Isinside(int x,int y) ;	//check whether fig is selected
 	virtual bool isSelected();

@@ -31,7 +31,9 @@ public:
 	ActionType GetUserAction() const;
 	void ExecuteAction(ActionType) ; //Creates an action and executes it
 	void setSelectedFig(CFigure*x);	//set the Selected Figure to any figure
-	CFigure* getSelectedFig();		//get the selected figure
+	void setClipboard(CFigure*c);	//set the Selected Figure to any figure
+	CFigure* getSelectedFig() const;		//get the selected figure
+	CFigure *getClipboard() const; 
 
 	// -- Figures Management Functions
 	void AddFigure(CFigure* pFig);          //Adds a new figure to the FigList

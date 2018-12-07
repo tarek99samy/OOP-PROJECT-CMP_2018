@@ -5,7 +5,8 @@
 #include"AddTriangleAction.h"
 #include"AddRhombusAction.h"
 #include"Actions\select.h"
-
+#include"Actions\CopyFigAction.h"
+#include"Actions\PasteFigAction.h"
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -66,6 +67,16 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		
 		case DRAWING_AREA:
 			break;
+
+		case COPY : 
+			pAct = new CopyFigAction(this);
+			break;
+
+		case PASTE : 
+			pAct = new PasteFigAction(this);
+			break;
+
+
 	}
 	
 	//Execute the created action
@@ -81,9 +92,17 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 void ApplicationManager::setSelectedFig(CFigure * x){
 	SelectedFig = x;
 }
-CFigure * ApplicationManager::getSelectedFig()
+CFigure * ApplicationManager::getSelectedFig() const
 {
 	return SelectedFig;
+}
+
+void ApplicationManager::setClipboard(CFigure * c){
+	Clipboard = c;
+}
+CFigure * ApplicationManager::getClipboard() const
+{
+	return Clipboard;
 }
 //==================================================================================//
 //						Figures Management Functions								//

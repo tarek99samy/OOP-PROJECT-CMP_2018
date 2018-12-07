@@ -7,11 +7,12 @@ class CRectangle : public CFigure
 {
 private:
 	int iD;
-	Point Corner1;	
-	Point Corner2;
+	Point Corner[2];	
+
 public:
 	CRectangle(Point , Point, GfxInfo FigureGfxInfo );
 	virtual void Draw(Output* pOut) const;
+	virtual Point* getPoints();
 	bool Isinside(int x, int y);
 	bool isSelected();
 };

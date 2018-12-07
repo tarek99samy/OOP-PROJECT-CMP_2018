@@ -2,20 +2,20 @@
 
 CRectangle::CRectangle(Point P1, Point P2, GfxInfo FigureGfxInfo):CFigure(FigureGfxInfo)
 {
-	Corner1 = P1;
-	Corner2 = P2;
+	Corner[0] = P1;
+	Corner[1] = P2;
 }
 	
 
 void CRectangle::Draw(Output* pOut) const
 {
 	//Call Output::DrawRect to draw a rectangle on the screen	
-	pOut->DrawRect(Corner1, Corner2, FigGfxInfo, Selected);
+	pOut->DrawRect(Corner[0], Corner[1], FigGfxInfo, Selected);
 }
 
 bool CRectangle::Isinside(int x, int y){
-	if (Corner1.x < Corner2.x) {	// "corner1" is at left
-		if ((x >= Corner1.x && x <= Corner2.x) && ((y >= Corner1.y && y <= Corner2.y) || (y <= Corner1.y && y >= Corner2.y))) {
+	if (Corner[0].x < Corner[1].x) {	// "Corner[0]" is at left
+		if ((x >= Corner[0].x && x <= Corner[1].x) && ((y >= Corner[0].y && y <= Corner[1].y) || (y <= Corner[0].y && y >= Corner[1].y))) {
 			return true;
 		}
 		else {
@@ -23,8 +23,8 @@ bool CRectangle::Isinside(int x, int y){
 		}
 	}
 
-	else if (Corner1.x > Corner2.x) {	// "corner2" is at left
-		if ((x >= Corner2.x && x <= Corner1.x) && ((y >= Corner2.y && y <= Corner1.y) || (y <= Corner2.y && y >= Corner1.y))) {
+	else if (Corner[0].x > Corner[1].x) {	// "Corner[1]" is at left
+		if ((x >= Corner[1].x && x <= Corner[0].x) && ((y >= Corner[1].y && y <= Corner[0].y) || (y <= Corner[1].y && y >= Corner[0].y))) {
 			return true;
 		}
 		else {
@@ -32,6 +32,12 @@ bool CRectangle::Isinside(int x, int y){
 		}
 	}
 }
+
+
+Point* CRectangle:: getPoints() {
+return Corner;
+}
+
 
 bool CRectangle::isSelected()
 {
