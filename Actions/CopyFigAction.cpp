@@ -30,6 +30,6 @@ void CopyFigAction::Execute()
 	//This action needs to read some parameters first
 	ReadActionParameters();
 	pManager->setClipboard(SelectedFigure);
-	pManager->getSelectedFig()->SetSelected(0);
+	pManager->getSelectedFig()->SetSelected(false);
 
 }

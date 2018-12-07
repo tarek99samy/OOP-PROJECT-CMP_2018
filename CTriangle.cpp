@@ -18,7 +18,7 @@ bool CTriangle::Isinside(int x, int y){
 	double A2 = (0.5)*(x*(vertices[0].y - vertices[1].y) + y*(vertices[1].x - vertices[0].x) + (vertices[0].x * vertices[1].y - vertices[0].y * vertices[1].x));
 	double A3 = (0.5)*(x*(vertices[0].y - vertices[2].y) + y*(vertices[2].x - vertices[0].x) + (vertices[0].x * vertices[2].y - vertices[2].x * vertices[0].y));
 
-	double Triangle_Area = (0.5)*(vertices[0].x*(vertices[1].y - vertices[2].y) + vertices[0].y*(vertices[2].x - vertices[11].x) + (vertices[1].x * vertices[2].y - vertices[1].y * vertices[2].x));
+	double Triangle_Area = (0.5)*(vertices[0].x*(vertices[1].y - vertices[2].y) + vertices[0].y*(vertices[2].x - vertices[1].x) + (vertices[1].x * vertices[2].y - vertices[1].y * vertices[2].x));
 
 	double Total_Area = abs(A1) + abs(A2) + abs(A3);
 	double Total_Area_after_error1 = Total_Area + 10;
