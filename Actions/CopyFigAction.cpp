@@ -10,7 +10,6 @@ void CopyFigAction::ReadActionParameters()
 {	
 	//Get a Pointer to the Input / Output Interfaces
 	Output* pOut = pManager->GetOutput();
-	//if(pManager->getSelectedFig() == NULL){pOut->PrintMessage("You Should select figure first");}
 	
 	pOut->PrintMessage("Figure Copied !");
 
@@ -27,9 +26,22 @@ void CopyFigAction::ReadActionParameters()
 //Execute the action
 void CopyFigAction::Execute() 
 {
+
+
+	if(pManager->getSelectedFig() == NULL)
+		
+		pManager->GetOutput()->PrintMessage("You Should select figure first");
+
+	else{
 	//This action needs to read some parameters first
 	ReadActionParameters();
 	pManager->setClipboard(SelectedFigure);
 	pManager->getSelectedFig()->SetSelected(false);
 
+}
+}
+
+
+CopyFigAction::~CopyFigAction(){
+	if(SelectedFigure!=NULL) delete SelectedFigure;
 }

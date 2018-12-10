@@ -13,7 +13,7 @@ private:
 	CFigure* SelectedFigure;
 public:
 	CopyFigAction(ApplicationManager *pApp);
-
+	~CopyFigAction();
 	//Reads rectangle parameters
 	virtual void ReadActionParameters();
 	
