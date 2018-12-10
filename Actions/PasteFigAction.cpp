@@ -13,7 +13,6 @@ void PasteFigAction::ReadActionParameters()
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
 
-	ClipboardFigure = pManager->getClipboard();
 	pOut->PrintMessage("Click point to paste the figure");
 	pIn->GetPointClicked(P.x, P.y);
 	pOut->ClearStatusBar();
@@ -26,19 +25,26 @@ void PasteFigAction::ReadActionParameters()
 void PasteFigAction::Execute() 
 {
 	//This action needs to read some parameters first
+	
+	ClipboardFigure = pManager->getClipboard();
+	
+	if(ClipboardFigure == NULL) pManager->GetOutput()->PrintMessage("Clipboard is Empty!");
+	
+	else{
+
 	ReadActionParameters();
-	
 	Point center;
-	
 	CRectangle* PastedFigure0 = dynamic_cast<CRectangle*>(ClipboardFigure);
 	CRhombus* PastedFigure1 = dynamic_cast<CRhombus*>(ClipboardFigure);
 	CTriangle* PastedFigure2 = dynamic_cast<CTriangle*>(ClipboardFigure);
 	CEllipse* PastedFigure3 = dynamic_cast<CEllipse*>(ClipboardFigure);
+	CLine* PastedFigure4 = dynamic_cast<CLine*>(ClipboardFigure);
 	GfxInfo gfx = ClipboardFigure->getGfxInfo();
 	
 	if(PastedFigure0){
 
 		Point* p = PastedFigure0->getPoints();
+
 		center.x = (p[0].x + p[1].x)/2;
 		center.y = (p[0].y + p[1].y)/2;
 
@@ -79,7 +85,22 @@ void PasteFigAction::Execute()
 
 		CEllipse *R=new CEllipse(P,gfx);
 		pManager->AddFigure(R);
-}
 
+	}else if(PastedFigure4){
+
+		Point* p = PastedFigure4->getPoints();
+		center.x = ( p[0].x + p[1].x )/2;
+		center.y = ( p[0].y + p[1].y )/2;
+		
+		Point P1,P2;
+		P1.x = P.x - center.x + p[0].x;
+		P1.y = P.y - center.y + p[0].y;
+		P2.x = P.x - center.x + p[1].x;
+		P2.y = P.y - center.y + p[1].y;
+
+		CLine *R=new CLine(P1,P2,gfx);
+		pManager->AddFigure(R);
+	}
+}
 }
 

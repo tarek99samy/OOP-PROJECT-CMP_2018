@@ -8,7 +8,7 @@
 #include"Actions\CopyFigAction.h"
 #include"Actions\PasteFigAction.h"
 //Constructor
-ApplicationManager::ApplicationManager()
+ApplicationManager::ApplicationManager() : Clipboard(NULL),SelectedFig(NULL)
 {
 	//Create Input and output
 	pOut = new Output;

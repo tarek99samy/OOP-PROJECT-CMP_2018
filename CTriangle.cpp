@@ -24,7 +24,7 @@ bool CTriangle::Isinside(int x, int y){
 	double Total_Area_after_error1 = Total_Area + 10;
 	double Total_Area_after_error2 = Total_Area - 10;
 	
-	if (Triangle_Area <= Total_Area_after_error1 && Triangle_Area >= Total_Area_after_error2) {
+	if (abs(Triangle_Area) <= Total_Area_after_error1 && abs(Triangle_Area) >= Total_Area_after_error2) {
 		return true;
 	}
 	else {

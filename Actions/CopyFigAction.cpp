@@ -20,6 +20,7 @@ void CopyFigAction::ReadActionParameters()
 	else if(dynamic_cast<CRhombus*>(pManager->getSelectedFig())) SelectedFigure = new CRhombus(p[0],gfx);
 	else if(dynamic_cast<CTriangle*>(pManager->getSelectedFig())) SelectedFigure = new CTriangle(p[0],p[1],p[2],gfx);
 	else if(dynamic_cast<CEllipse*>(pManager->getSelectedFig())) SelectedFigure = new CEllipse(p[0],gfx);
+	else if(dynamic_cast<CLine*>(pManager->getSelectedFig())) SelectedFigure = new CLine(p[0],p[1],gfx);
 
 }
 
@@ -43,5 +44,5 @@ void CopyFigAction::Execute()
 
 
 CopyFigAction::~CopyFigAction(){
-	if(SelectedFigure!=NULL) delete SelectedFigure;
+	if(SelectedFigure != NULL) delete SelectedFigure;
 }
