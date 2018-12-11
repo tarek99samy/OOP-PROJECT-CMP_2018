@@ -102,5 +102,13 @@ void PasteFigAction::Execute()
 		pManager->AddFigure(R);
 	}
 }
+
+
+	if(pManager->IsCutted){ //DeLete Figure
+
+		pManager->IsCutted = false;
+
+	}
+
 }
 

@@ -1,12 +1,13 @@
 #include "ApplicationManager.h"
 #include "Actions\AddRectAction.h"
-#include"AddLineAction.h"
-#include"AddEllipseAction.h"
-#include"AddTriangleAction.h"
-#include"AddRhombusAction.h"
+#include"Actions\AddLineAction.h"
+#include"Actions\AddEllipseAction.h"
+#include"Actions\AddTriangleAction.h"
+#include"Actions\AddRhombusAction.h"
 #include"Actions\select.h"
 #include"Actions\CopyFigAction.h"
 #include"Actions\PasteFigAction.h"
+#include"Actions\CutFigAction.h"
 //Constructor
 ApplicationManager::ApplicationManager() : Clipboard(NULL),SelectedFig(NULL)
 {
@@ -76,7 +77,11 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new PasteFigAction(this);
 			break;
 
+		case CUT : 
+			pAct = new CutFigAction(this);
+			break;
 
+	
 	}
 	
 	//Execute the created action

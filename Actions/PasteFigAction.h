@@ -1,9 +1,9 @@
 #include "Action.h"
 #include "..\Figures\CRectangle.h"
-#include "..\CTriangle.h"
-#include"..\CEllipse.h"
-#include"..\CLine.h"
-#include"..\CRhombus.h"
+#include "..\Figures\CTriangle.h"
+#include"..\Figures\CEllipse.h"
+#include"..\Figures\CLine.h"
+#include"..\Figures\CRhombus.h"
 class PasteFigAction: public Action
 {
 

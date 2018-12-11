@@ -126,15 +126,6 @@
     <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c">
       <Filter>CMUgraphicsLib\JPEG</Filter>
     </ClCompile>
-    <ClCompile Include="Figures\CFigure.cpp">
-      <Filter>Figures Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Figures\CRectangle.cpp">
-      <Filter>Figures Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Actions\AddRectAction.cpp">
-      <Filter>Action Classes</Filter>
-    </ClCompile>
     <ClCompile Include="GUI\Input.cpp">
       <Filter>GUI Classes</Filter>
     </ClCompile>
@@ -148,37 +139,49 @@
     <ClCompile Include="CMUgraphicsLib\colors.cpp">
       <Filter>CMUgraphicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="CLine.cpp">
+    <ClCompile Include="Figures\CEllipse.cpp">
       <Filter>Figures Classes</Filter>
     </ClCompile>
-    <ClCompile Include="AddLineAction.cpp">
-      <Filter>Action Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="CEllipse.cpp">
+    <ClCompile Include="Figures\CFigure.cpp">
       <Filter>Figures Classes</Filter>
     </ClCompile>
-    <ClCompile Include="AddEllipseAction.cpp">
-      <Filter>Action Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="AddTriangleAction.cpp">
-      <Filter>Action Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="CTriangle.cpp">
+    <ClCompile Include="Figures\CLine.cpp">
       <Filter>Figures Classes</Filter>
     </ClCompile>
-    <ClCompile Include="CRhombus.cpp">
+    <ClCompile Include="Figures\CRectangle.cpp">
       <Filter>Figures Classes</Filter>
     </ClCompile>
-    <ClCompile Include="AddRhombusAction.cpp">
+    <ClCompile Include="Figures\CRhombus.cpp">
+      <Filter>Figures Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\CTriangle.cpp">
+      <Filter>Figures Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddEllipseAction.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Actions\select.cpp">
+    <ClCompile Include="Actions\AddLineAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddRectAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddRhombusAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddTriangleAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\CopyFigAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\CutFigAction.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
     <ClCompile Include="Actions\PasteFigAction.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Actions\CopyFigAction.cpp">
+    <ClCompile Include="Actions\select.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -243,18 +246,6 @@
     <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h">
       <Filter>CMUgraphicsLib\JPEG</Filter>
     </ClInclude>
-    <ClInclude Include="Figures\CFigure.h">
-      <Filter>Figures Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Figures\CRectangle.h">
-      <Filter>Figures Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Actions\Action.h">
-      <Filter>Action Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Actions\AddRectAction.h">
-      <Filter>Action Classes</Filter>
-    </ClInclude>
     <ClInclude Include="GUI\Input.h">
       <Filter>GUI Classes</Filter>
     </ClInclude>
@@ -268,37 +259,52 @@
       <Filter>Application Manager</Filter>
     </ClInclude>
     <ClInclude Include="DEFS.h" />
-    <ClInclude Include="CLine.h">
+    <ClInclude Include="Figures\CEllipse.h">
       <Filter>Figures Classes</Filter>
     </ClInclude>
-    <ClInclude Include="AddLineAction.h">
-      <Filter>Action Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="CEllipse.h">
+    <ClInclude Include="Figures\CFigure.h">
       <Filter>Figures Classes</Filter>
     </ClInclude>
-    <ClInclude Include="AddEllipseAction.h">
-      <Filter>Action Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="CTriangle.h">
+    <ClInclude Include="Figures\CLine.h">
       <Filter>Figures Classes</Filter>
     </ClInclude>
-    <ClInclude Include="AddTriangleAction.h">
-      <Filter>Action Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="CRhombus.h">
+    <ClInclude Include="Figures\CRectangle.h">
       <Filter>Figures Classes</Filter>
     </ClInclude>
-    <ClInclude Include="AddRhombusAction.h">
+    <ClInclude Include="Figures\CRhombus.h">
+      <Filter>Figures Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\CTriangle.h">
+      <Filter>Figures Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Action.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Actions\select.h">
+    <ClInclude Include="Actions\AddEllipseAction.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddLineAction.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddRectAction.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddRhombusAction.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddTriangleAction.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\CopyFigAction.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\CutFigAction.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
     <ClInclude Include="Actions\PasteFigAction.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Actions\CopyFigAction.h">
+    <ClInclude Include="Actions\select.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
   </ItemGroup>

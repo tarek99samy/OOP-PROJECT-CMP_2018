@@ -34,7 +34,7 @@ public:
 	void setClipboard(CFigure*c);	//set the Selected Figure to any figure
 	CFigure* getSelectedFig() const;		//get the selected figure
 	CFigure *getClipboard() const; 
-
+	bool IsCutted;
 	// -- Figures Management Functions
 	void AddFigure(CFigure* pFig);          //Adds a new figure to the FigList
 	CFigure *GetFigure(int x, int y) const; //Search for a figure given a point inside the figure
